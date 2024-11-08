@@ -1,3 +1,4 @@
+import { useContext } from "react";
 const UserProfile =  (props) => {
     return (
         <div>
