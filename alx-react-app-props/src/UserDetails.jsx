@@ -1,4 +1,9 @@
-function userDetails ({ userData}) {
+import { useContext } from "react";
+import UserContext from "./components/UserContext";
+
+function UserDetails() {
+    const userData = useContext(UserContext);
+
     return (
         <div>
             <p>Name: {userData.name}</p>
@@ -7,4 +12,4 @@ function userDetails ({ userData}) {
     );
 }
 
-export default userDetails;
+export default UserDetails;
