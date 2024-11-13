@@ -15,5 +15,13 @@ import React from 'react';
     getFilteredRecipes: () => {
         const { recipes, searchTerm } = getState();
         return recipes.filter(recipe => recipe.title.toLowerCase().includes(searchTerm.toLowerCase()));
-    }
+    },
+    favorites: [],
+    addFavorite: (recipeId) => set(state => ({ favorites: [...state.favorites, recipeId]})),
+    removeFavorite: (recipeId) => set(state => ({ favorites: state.favorites.filter(id => id !== recipeId)})),
+    recommendations: [],
+    generateRecommendations: () => set(state => {
+        const recommended = state.recipe.filter(recipe => state.favorites.includes(recipe.id) && Math.random() > 0.5);
+        return { recommendations: recommended };
+    }),
 }));
