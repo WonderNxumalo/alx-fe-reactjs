@@ -1,15 +1,19 @@
+import React from "react";
 import { useRecipeStore } from "./recipeStore";
+import SearchBar from "./SearchBar"
 
 const RecipeList = () => {
-    const recipes = useRecipeStore(state => state.recipes);
+    const { filteredRecipes } = useRecipeStore();
 
     return (
         <div>
-            {recipes.map(recipe => (
+            <h2>Recipes</h2>
+            <SearchBar />
+            {filteredRecipes.map(recipe => (
                 <div key={recipe.id}>
-                    <h3>{recipe.title}</h3>
-                    <p>{recipe.description}</p>
-                </div>
+                <h3>{recipe.title}</h3>
+                <p>{recipe.description}</p>
+            </div>
             ))}
         </div>
     );
