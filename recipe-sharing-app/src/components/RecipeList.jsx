@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar"
 import { Link } from "react-router-dom";
 
 const RecipeList = () => {
+    const recipes = useRecipeStore(state => state.recipes);
     const { filteredRecipes } = useRecipeStore();
 
     return (
@@ -15,6 +16,13 @@ const RecipeList = () => {
                 <h3>{recipe.title}</h3>
                 <p>{recipe.description}</p>
             </div>
+            ))}
+
+            {recipes.map(recipe => (
+                <div key={recipe.id}>
+                    <h3>{recipe.title}</h3>
+                    <p>{recipe.description}</p>
+                </div>
             ))}
         </div>
     );
