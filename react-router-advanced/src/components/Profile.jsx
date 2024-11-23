@@ -15,3 +15,10 @@ const Profile = () => {
 };
 
 export default Profile;
+
+/*
+Routes
+Route
+ProfileDetails
+ProfileSettings
+*/
