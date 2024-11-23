@@ -26,4 +26,10 @@ const PostsComponent = () => {
 
 export default PostsComponent;
 
-/* isError */
+/* isError 
+cacheTime
+staleTime
+refetchOnWindowFocus
+keepPreviousData
+
+*/
