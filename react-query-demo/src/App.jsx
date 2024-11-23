@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from 'react-query'
 import './App.css'
-import PostComponent from './assets/components/PostComponent';
+import PostsComponent from './assets/components/PostsComponent';
 
 const queryClient = new QueryClient();
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <PostComponent />
+      <PostsComponent />
     </QueryClientProvider>
   )
 }

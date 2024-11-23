@@ -6,7 +6,7 @@ const fetchPosts = async () => {
     return response.json();
 };
 
-const PostComponent = () => {
+const PostsComponent = () => {
     const { isLoading, error, data, refetch } = useQuery('posts', fetchPosts);
     if (isLoading) return <p>Loading posts...</p>;
     if (error) return <p>Error fetching posst: {error.message}</p>;
@@ -24,4 +24,4 @@ const PostComponent = () => {
     );
 };
 
-export default PostComponent;
+export default PostsComponent;
