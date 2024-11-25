@@ -1,10 +1,11 @@
 import './App.css'
+import UserProfile from './components/UserProfile'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-red-600'>Hello</h1>
+      <UserProfile />
     </>
   )
 }
