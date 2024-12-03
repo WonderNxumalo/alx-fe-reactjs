@@ -22,7 +22,7 @@ function AddRecipeForm() {
         e.preventDefault();
     };
 
-    // Basic validation [Errors: steps]
+    // Basic validation [Errors: steps, validate]
 
     const newErrors = {};
     if(!formData.title) {
