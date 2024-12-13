@@ -8,3 +8,5 @@ export const fetchUserData = async (username) => {
     throw error; // Rethrow the error for handling in the component
   }
 };
+
+{/* ["https://api.github.com/search/users?q", "location", "minRepos"] */}
