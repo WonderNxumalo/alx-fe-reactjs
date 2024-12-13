@@ -117,4 +117,7 @@ function Search() {
 
 export default Search;
 
-{/* fetchUserData */}
+{/* fetchUserData 
+    target.value 
+    ["Looks like we cant find the user"]
+    */}
